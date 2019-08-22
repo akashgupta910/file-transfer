@@ -1,0 +1,38 @@
+body {
+  background: #fff;
+}
+
+.file {
+    margin: 30px 60px;
+    background: #efefef !important;
+    padding: 30px;
+}
+
+.file h3 {
+    color: #333;
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+.file a {
+    color: #333;
+}
+
+.file .fa {
+    margin-left: 30px;
+}
+
+.file p {
+    color: #333;
+}
+
+.file .btn-del {
+    background: #EA7773;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+}
+
+.file .btn-del .fa {
+    margin-left: 10px;
+}

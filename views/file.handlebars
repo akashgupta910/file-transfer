@@ -1,0 +1,15 @@
+<div class="file">
+    <h3 class="display-4">Your File</h3>
+    <a href="userFiles/{{f_name}}" download>{{ f_name }} <i class="fa fa-download"></i></a>
+    <a href="" class="delete"></a>
+    <h3 class="display-4 mt-4">Message</h3>
+    {{#if message}}
+        <p>{{message}}</p>
+    {{else}}
+        <p>No message!</p>
+    {{/if}}
+    {{!-- <form action="/delete/{{obj_id}}" method="dialog">
+        <button type="submit" class="btn-del">Delete File <i class="fa fa-trash"></i></button>
+    </form>
+    <a href="/delete/{{obj_id}}" type="delete">delete</a> --}}
+</div>

@@ -1,0 +1,135 @@
+* 
+{
+    margin: 0;
+    padding: 0;
+}
+
+:root 
+{
+    --primaryColor: #EA7773;
+}
+
+
+body 
+{
+    background: var(--primaryColor);
+    color: #fff;
+    height: 100vh;
+}
+
+/* ------------ Navbar ------------ */
+
+#nav-bar 
+{
+    background: #fff;
+}
+
+/* --------------- Hero ---------------- */
+ 
+.info-text 
+{
+    margin-top: 7em;
+    margin-bottom: 1em;
+}
+
+.info-text h1 
+{
+    letter-spacing: 1px;
+    font-size: 50px;
+    margin: 30px 0;
+    text-align: center;
+}
+
+.info-text p 
+{
+    font-size: 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.info-text ul 
+{
+    margin-left: 15px;
+    margin-top: 23px;
+}
+
+.info-text li 
+{
+    font-size: 18px;
+    letter-spacing: 1px;
+    margin: 12px 0;
+}
+
+.accordion-sec 
+{
+    margin-top: 3em;
+    margin-bottom: 1em;
+}
+
+.accordion .card 
+{
+    border: 10px solid #fff;
+}
+
+.accordion .card-header
+{
+    background: #fff !important;
+    background: var(--primaryColor) !important;
+    border: none !important;
+
+}
+
+.accordion .card-header button 
+{
+    color: #fff !important;
+    text-decoration: none;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    letter-spacing: 1px;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.accordion .card-header button::after
+{
+    content: '';
+    width: 25px;
+    height: 25px;
+    transform: rotate(45deg);
+    background: var(--primaryColor);
+    position: absolute;
+    right: 4%;
+    margin-top: 6px;
+}
+
+.form-share {
+    color: #333;
+    margin: 10px 0;
+}
+
+.form-share h4 
+{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    margin-bottom: 20px;
+    color: var(--primaryColor);
+    text-align: center;
+}
+
+.form-share input, .form-access input
+{
+    margin: 10px 0;
+}
+
+.form-share button, .form-access button
+{
+    background: var(--primaryColor);
+    color: #fff;
+    border-radius: 0;
+    width: 100%;
+    margin: 10px 0;
+    letter-spacing: 1px;
+    box-shadow: none !important;
+}
+
+.form-share button:hover, .form-access button:hover
+{
+    color: #fff;
+}
