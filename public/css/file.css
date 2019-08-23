@@ -36,3 +36,8 @@ body {
 .file .btn-del .fa {
     margin-left: 10px;
 }
+
+.file .btn-del a {
+    text-decoration: none;
+    color: #fff;
+}

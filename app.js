@@ -8,6 +8,7 @@ const session = require('express-session');
 const cookieParser = require('cookie-parser');
 const flash = require('connect-flash');
 const mongoose = require('mongoose');
+const fs = require('fs');
 
 // connection the MongoDB database
 mongoose.connect('mongodb://localhost:27017/files', { useNewUrlParser: true })
@@ -219,17 +220,32 @@ app.post('/access', (req, res) => {
     }
 });
 
-// app.delete('/delete/:id', (req, res) => {
-//     let id = req.param.id;
-//     File.remove({ _id: id }, (err) => {
-//         if (err) {
-//             res.send('Error!');
-//         } 
-//         else {
-//             res.send('successfully deleted')
-//         }
-//     });
-// });
+app.get('/delete/:id', (req, res) => {
+    File.findOne({ _id: req.params.id })
+        .then((doc) => {
+            if (doc) {
+                let fname = doc.file_name;
+                File.deleteOne({ _id: req.params.id }).exec()
+                    .then(result => {
+                        const filepath = path.dirname(__filename) + `/public/userFiles/${fname}`;
+                        try {
+                            fs.unlinkSync(filepath)
+                            //file removed
+                          } catch(err) {
+                            console.error(err)
+                          }
+                        req.flash('type', 'success');
+                        req.flash('info', 'File Seccessfully Removed');
+                        res.redirect('/');
+                    })
+                    .catch(err => {
+                        req.flash('type', 'danger');
+                        req.flash('info', 'Something Went Wrong!');
+                        res.redirect('/access');
+                    });
+            }
+        })
+});
 
 // server
 const PORT = process.env.PORT || 3000;
