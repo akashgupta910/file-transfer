@@ -1,5 +1,5 @@
 # File Transfer App
-This is a file transfer app through browser using Node.js, express, mongoose, express-fileupload and other packages.
+This is a file transfer through browser application using Node.js, express, mongoose, express-fileupload and other packages.
 # Usage
 ```
 $ npm install
