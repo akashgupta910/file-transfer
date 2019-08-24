@@ -11,7 +11,7 @@ const mongoose = require('mongoose');
 const fs = require('fs');
 
 // connection the MongoDB database
-mongoose.connect('mongodb://localhost:27017/files', { useNewUrlParser: true })
+mongoose.connect(require('./config/key'), { useNewUrlParser: true })
     .then(() => console.log('Connected to Database...'))
     .catch(err => console.log(`Failed! Not Connected to the Database... ${err}`))
 
